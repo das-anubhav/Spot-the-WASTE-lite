@@ -1,24 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2V3-Tu-1AR">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detecting Wastes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spot_the_WASTE_lite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCY-mU-qRj">
+                                <rect key="frame" x="0.0" y="44" width="375" height="541"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qz-vw-Rqj">
+                                <rect key="frame" x="0.0" y="585" width="375" height="82"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="vzw-6X-cIF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FCY-mU-qRj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5qz-vw-Rqj" secondAttribute="trailing" id="BGU-n1-Nsc"/>
+                            <constraint firstItem="FCY-mU-qRj" firstAttribute="leading" secondItem="5qz-vw-Rqj" secondAttribute="leading" id="K8p-rw-s8R"/>
+                            <constraint firstItem="5qz-vw-Rqj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MYb-KQ-mWb"/>
+                            <constraint firstItem="5qz-vw-Rqj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Rpj-0E-3Vd"/>
+                            <constraint firstItem="FCY-mU-qRj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V6Z-VT-I5l"/>
+                            <constraint firstItem="FCY-mU-qRj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="5qz-vw-Rqj" secondAttribute="leading" id="gZe-dU-qBq"/>
+                            <constraint firstItem="5qz-vw-Rqj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k38-fm-uNN"/>
+                            <constraint firstItem="5qz-vw-Rqj" firstAttribute="top" secondItem="FCY-mU-qRj" secondAttribute="bottom" id="koX-Ym-Jqk"/>
+                            <constraint firstItem="FCY-mU-qRj" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="5qz-vw-Rqj" secondAttribute="trailing" id="oUd-dZ-e3A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Detecting Wastes" id="h1G-5Q-acG"/>
+                    <connections>
+                        <outlet property="cameraView" destination="FCY-mU-qRj" id="zES-YU-LTS"/>
+                        <outlet property="descLabel" destination="5qz-vw-Rqj" id="AVT-4R-phD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.2" y="129.08545727136433"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G0m-LB-J1O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2V3-Tu-1AR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eoi-Ef-MEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.55821917809999999" green="0.68581788880000005" blue="0.2648859287" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K8Y-nH-Daj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bd-6c-gMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
